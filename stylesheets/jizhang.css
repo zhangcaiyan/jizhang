@@ -1,9 +1,11 @@
 body.login{
   background-color: white;
+  vertical-align: center;
 }
 
-body.login form{
+body.login .login_form{
   text-align: left;
+  width: 20%;
 }
 
 

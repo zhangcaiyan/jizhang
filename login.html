@@ -6,43 +6,49 @@
     <script type="text/javascript" src="javascripts/jquery.js" ></script>
   </head>
   <body class="login">
-    <div class="login_form">
-      <form name="#" method="post">
-        <table>
-          <tr>
-            <td>用户名:</td>
-            <td><input type="TEXT" name="username" value="请输入用户名或email" /></td>
-          </tr>
-          <tr>
-            <td>密码:</td>
-            <td><input type="PASSWORD" name="password"/></td>
-          </tr>
-          <tr>
-            <td>记住密码:</td>
-            <td><input type="CHECKBOX" name="remember"/></td>
-          </tr>
-        </table>
+    <span class="login_right_top">
+      <a href="#">注册?</a>
+      <a href="#">忘记密码?</a>
+    </span>
 
-        <input type="IMAGE" src="images/submit.png" />
-      </form>
-    </div>
+    <form name="#" method="post" class="login_form">
+      <table>
+        <tr>
+          <td>用户名:</td>
+          <td><input type="TEXT" name="username" value="请输入用户名或email" class="login_input" /></td>
+        </tr>
+        <tr>
+          <td>密码:</td>
+          <td><input type="PASSWORD" name="password" class="login_input"/></td>
+        </tr>
+        <tr>
+          <td>记住密码:</td>
+          <td><input type="CHECKBOX" name="remember"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:right">
+            <input type="IMAGE" src="images/login.png" />
+          </td>
+        </tr> 
+      </table>
+    </form>
   </body>
 </html>
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $("input[name='username']").attr("class", "qianse_text")
+    $("input[name='username']").attr("class", "qianse_text login_input")
     username_value = $("input[name='username']").val()
     $("input[name='username']").bind("focus", function(){
       if($(this).val()==username_value){
-        $(this).attr("class", "")
+        $(this).attr("class", "login_input")
         $(this).attr("value", "")
       }
     })
     $("input[name='username']").bind("blur", function(){
       if ($(this).attr("value")==''){
         $(this).attr("value", username_value)
-        $(this).attr("class", "qianse_text")
+        $(this).attr("class", "qianse_text login_input")
       }
     })
   })

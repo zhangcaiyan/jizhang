@@ -1,18 +1,52 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>登陆-记账网</title>
-        <link type="text/css" rel="stylesheet" href="stylesheets/jizhang.css" />
-    </head>
-    <body class="login">
-        <div class="login_form">
-            <form name="#" method="post">
-                用户名: <input type="TEXT" name="username"/></br>
-                密码: <input type="PASSWORD" name="password"/></br>
-                记住密码: <input type="CHECKBOX" name="remember"/></br>
-                <input type="SUBMIT"/>
-            </form>
-        </div>
-    </body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登陆-记账网</title>
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css" />
+    <script type="text/javascript" src="javascripts/jquery.js" ></script>
+  </head>
+  <body class="login">
+    <div class="login_form">
+      <form name="#" method="post">
+        <table>
+          <tr>
+            <td>用户名:</td>
+            <td><input type="TEXT" name="username" value="请输入用户名或email" /></td>
+          </tr>
+          <tr>
+            <td>密码:</td>
+            <td><input type="PASSWORD" name="password"/></td>
+          </tr>
+          <tr>
+            <td>记住密码:</td>
+            <td><input type="CHECKBOX" name="remember"/></td>
+          </tr>
+        </table>
+
+        <input type="IMAGE" src="images/submit.png" />
+      </form>
+    </div>
+  </body>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("input[name='username']").attr("class", "qianse_text")
+    username_value = $("input[name='username']").val()
+    $("input[name='username']").bind("focus", function(){
+      if($(this).val()==username_value){
+        $(this).attr("class", "")
+        $(this).attr("value", "")
+      }
+    })
+    $("input[name='username']").bind("blur", function(){
+      if ($(this).attr("value")==''){
+        $(this).attr("value", username_value)
+        $(this).attr("class", "qianse_text")
+      }
+    })
+  })
+</script>
+
+
 

@@ -4,8 +4,12 @@ body.login{
 }
 
 body.login .login_form{
-  text-align: left;
+  text-align: center;
   width: 20%;
+}
+
+.qianse_text{
+  color: #979393;
 }
 
 

@@ -1,11 +1,80 @@
 body.login{
-  background-color: #EEEEEE;
+  background-color: #F3F4F6;
+}
+
+body.login .reset_password{
+  text-decoration: none;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+.header .logo{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.header{
+  background-color: #0E95B5;
+  width: 100%;
+  height: 60px;
+  text-decoration: none;
+}
+
+.header a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header .wangzhi{
+  float: left;
+  vertical-align: text-bottom;
+  position: relative;
+  left: 20px;
+  top: 40px;
+}
+
+.header ul.left{
+  position: relative;
+  bottom: 18px;
+  margin-left: 10%;
+}
+
+.header ul.left{
+  float: left;
+  margin-right: 20%;
+}
+
+.header ul.left li{
+  float: left;
+  margin-right: 20px;
+}
+
+.header ul.right{
+  float: right;
+  margin-right: 20%;
+}
+
+.header ul.right li{
+  float: left;
+  font-size: 20px;
+  margin-right: 20px;
 }
 
 .login_form{
-  margin: 250px auto; 
-  text-align: center;
-  width: 600px;
+  margin: 100px auto; 
+  width: 40%;  
+}
+
+.error_messages ul li{
+  padding-bottom:5px;
+}
+
+.error_messages ul{
+  color: #E0734A;
+  padding: 0px;
+  text-align: left;
 }
 
 .login_input{
@@ -15,15 +84,14 @@ body.login{
   line-height: 20px;
   margin: 0;
   padding: 3px;
-  width: 440px;
+  width: 300px;
 }
 
 .qianse_text{
   color: #979393;
 }
 
-.login_right_top{
-  position:relative;
-  top: 10px;
-  left: 10px;
+.un_underline_link{
+  text-decoration:none;
+  color: black;
 }

@@ -6,32 +6,52 @@
     <script type="text/javascript" src="javascripts/jquery.js" ></script>
   </head>
   <body class="login">
-    <span class="login_right_top">
-      <a href="#">注册?</a>
-      <a href="#">忘记密码?</a>
-    </span>
+    <div class="header">
+      <ul class="left">
+        <li><a href="#" class="logo">我的钱包</a></li>
+        <li><a href="#" class="wangzhi">7ian8bao.com</a></li>
+      </ul>
+      <ul class="right">
+        <li><a href="#">注册</a>
+        <li><a href="#">主页</a>
+      </ul>
+    </div>
+    
+    <div class="login_form">
+      <span class="error_messages">
+        <ul>
+          <li>用户名不存在</li>
+          <li>用户名或密码有误</li>
+        </ul> 
+      </span>
+      <form name="#" method="post">
+        <table>
+          <tr>
+            <td>用户名:</td>
+            <td><input type="TEXT" name="username" value="请输入用户名或email" class="login_input" /></td>
+          </tr>
+          <tr>
+            <td>密码:</td>
+            <td><input type="PASSWORD" name="password" class="login_input"/></td>
+          </tr>
+          <tr>
+            <td class="remember"><a href="#" class="un_underline_link">记住密码:</a></td>
+            <td style="text-align:left;"><input type="CHECKBOX" name="remember"/></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="text-align:right">
+              <input type="IMAGE" src="images/login.png" style="float:right;" />
+            </td>
+          </tr> 
+          <tr>
+            <td colspan="2"><a href="#" class="reset_password">忘记密码?</a></td>
+          </tr>
+        </table>
+      </form>
+    </div>
 
-    <form name="#" method="post" class="login_form">
-      <table>
-        <tr>
-          <td>用户名:</td>
-          <td><input type="TEXT" name="username" value="请输入用户名或email" class="login_input" /></td>
-        </tr>
-        <tr>
-          <td>密码:</td>
-          <td><input type="PASSWORD" name="password" class="login_input"/></td>
-        </tr>
-        <tr>
-          <td>记住密码:</td>
-          <td><input type="CHECKBOX" name="remember"/></td>
-        </tr>
-        <tr>
-          <td colspan="2" style="text-align:right">
-            <input type="IMAGE" src="images/login.png" />
-          </td>
-        </tr> 
-      </table>
-    </form>
+
   </body>
 </html>
 
@@ -45,10 +65,20 @@
         $(this).attr("value", "")
       }
     })
+
     $("input[name='username']").bind("blur", function(){
       if ($(this).attr("value")==''){
         $(this).attr("value", username_value)
         $(this).attr("class", "qianse_text login_input")
+      }
+    })
+
+    $(".remember").bind("click", function(){
+      is_checked = $("input[name='remember']").attr("checked")
+      if (is_checked){
+        $("input[name='remember']").attr("checked", false)
+      }else{
+        $("input[name='remember']").attr("checked", true) 
       }
     })
   })

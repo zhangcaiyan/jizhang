@@ -1,24 +1,28 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>登陆-记账网</title>
+    <title>登陆-我的账本</title>
     <link type="text/css" rel="stylesheet" href="stylesheets/style.css" />
     <script type="text/javascript" src="javascripts/jquery.js" ></script>
   </head>
   <body class="login">
     <div class="header">
       <ul class="left">
-        <li><a href="#" class="logo">我的钱包</a></li>
-        <li><a href="#" class="wangzhi">7ian8bao.com</a></li>
+        <!--<li><a href="#" class="logo">我的账本</a></li>-->
+        <!--<li><a href="#" class="wangzhi">7ian8bao.com</a></li>-->
       </ul>
       <ul class="right">
-        <li><a href="#">注册</a>
-        <li><a href="#">主页</a>
+        <li><a href="register.html">注册</a></li>
+        <li><a href="reset_password.html" class="rp_font">忘记密码?</a></li>
       </ul>
     </div>
-    
+
+    <span id="notice" class="success_notice">
+      注册成功，请到您的邮箱里激活账户
+    </span>
+
     <div class="login_form">
-      <span class="error_messages">
+      <span class="error_messages error_notice">
         <ul>
           <li>用户名不存在</li>
           <li>用户名或密码有误</li>
@@ -44,9 +48,6 @@
               <input type="IMAGE" src="images/login.png" style="float:right;" />
             </td>
           </tr> 
-          <tr>
-            <td colspan="2"><a href="#" class="reset_password">忘记密码?</a></td>
-          </tr>
         </table>
       </form>
     </div>

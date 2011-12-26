@@ -1,5 +1,5 @@
 body.login{
-  background-color: #8BB83D;
+  background-color: #FFFFFF;
 }
 
 body.login .reset_password{
@@ -16,10 +16,10 @@ ul li{
 }
 
 .header{
-  background-color: #448907;
-  width: 100%;
+  background-color: #59595B;
   height: 60px;
   text-decoration: none;
+  width: 100%;
 }
 
 .header a{
@@ -29,8 +29,12 @@ ul li{
 
 .header a:hover{
   color: #FFCC00;
-  text-decoration: none;
 }
+
+a.current{
+  color: #FFCC00;
+}
+
 
 .header .wangzhi{
   float: left;
@@ -112,9 +116,22 @@ ul li{
 }
 
 .success_notice{
-  color: #600fed;
+  color: #009AE9;
 }
 
 .error_notice{
   color: #E0734A;
+}
+
+.submit{
+  background: -moz-linear-gradient(center top , #F7F7F7, #E6E6E6) repeat scroll 0 0 transparent;
+  border: 0.1em solid #666666;
+  border-radius: 0.3em 0.3em 0.3em 0.3em;
+  cursor: pointer;
+  font-size: 75%;
+  font-weight: 700;
+  height: 28px;
+  width: 80px;
+  padding: 0 0.5em;
+  text-shadow: 0 0.1em 0 #FFFFFF;
 }

@@ -1,8 +1,8 @@
-body.login{
+body.main{
   background-color: #FFFFFF;
 }
 
-body.login .reset_password{
+body.main .reset_password{
   text-decoration: none;
 }
 
@@ -60,6 +60,37 @@ a.current{
   margin-right: 20px;
 }
 
+.header ul.navigation{
+  float: left; 
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.header ul.navigation li{
+  float: left; 
+  margin-right: 20px;
+}
+
+.header ul.about_me{
+  color: #DDD2D2;
+  float: right; 
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.header ul.about_me li{
+  float: left;
+  margin-right: 20px;
+}
+
+.header ul.about_me a{
+  color: #DDD2D2;
+}
+
+.header ul.about_me a:hover{
+  color: #FFFFFF;
+}
+
 .header ul.right{
   float: right;
   margin-right: 20%;
@@ -110,7 +141,7 @@ a.current{
 }
 
 #notice{
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
   top: 10px;
 }

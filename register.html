@@ -83,7 +83,7 @@
 
 
     $("input[name='username']").bind("focus", function(){
-      $(this).parent().next().text("用户名长度不能多余15个字符").addClass("success_notice")
+      $(this).parent().next().text("用户名长度不能多余15个字符").attr("class", "success_notice")
     })
 
     $("input[name='username']").bind("blur", function(){
@@ -101,7 +101,7 @@
 
 
     $("input[name='password']").bind("focus", function(){
-      $(this).parent().next().text("密码长度不能多余20个字符").addClass("success_notice")
+      $(this).parent().next().text("密码长度不能多余20个字符").attr("class", "success_notice")
     })
 
     $("input[name='password']").bind("blur", function(){
@@ -112,6 +112,9 @@
         notice_area.text("密码不能为空").addClass("error_notice") 
       }else if(password.length < 20){
         notice_area.text("密码可用").addClass("success_notice")
+        if(password == $("input[name='password_confirm']").val()){
+           $("input[name='password_confirm']").parent().next().text("两次输入的密码一致").attr("class", "success_notice")
+        }
       }else{
         notice_area.text("密码长度不能多余20个字符").addClass("error_notice")
       }
@@ -120,15 +123,14 @@
     $("input[name='password_confirm']").bind("blur", function(){
       password_confirm = $(this).val()
       notice_area = $(this).parent().next()
-      notice_area.attr("class", "")
       if(password_confirm == ""){
-        notice_area.text("密码确认不能为空").addClass("error_notice") 
+        notice_area.text("密码确认不能为空").attr("class", "error_notice") 
       }
       else if(password_confirm != $("input[name='password']").val()){
-        notice_area.text("两次输入的密码不一致").addClass("error_notice")
+        notice_area.text("两次输入的密码不一致").attr("class", "error_notice")
       }
       else{
-        notice_area.text("两次输入的密码一致").addClass("success_notice") 
+        notice_area.text("两次输入的密码一致").attr("class", "success_notice") 
       }
 
     })

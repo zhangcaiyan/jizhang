@@ -1,9 +1,41 @@
-body.main{
+body#main{
   background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
 }
 
-body.main .reset_password{
+body#main .reset_password{
   text-decoration: none;
+}
+
+#main #left_navigation{
+  float: left;
+  width: 250px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+#main #left_navigation a{
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+#main #left_navigation ul li{
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+#main #left_navigation .current{
+  color: #DD4B4A;
+}
+
+#main #right_body{
+  float: left;
+}
+
+ul {
+  padding: 0px; 
 }
 
 ul li{
@@ -15,11 +47,21 @@ ul li{
   font-weight: bold;
 }
 
+#main #bottom_body{
+  float: left;
+  width: 100%;
+}
+
+#bottom_body .login_form{
+
+}
+
 .header{
   background-color: #59595B;
   height: 60px;
   text-decoration: none;
   width: 100%;
+  float: left;
 }
 
 .header a{
@@ -31,7 +73,7 @@ ul li{
   color: #FFCC00;
 }
 
-a.current{
+.header a.current{
   color: #FFCC00;
 }
 
@@ -113,7 +155,6 @@ a.current{
 }
 
 .error_messages ul{
-  padding: 0px;
   text-align: left;
 }
 

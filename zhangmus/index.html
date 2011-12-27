@@ -5,7 +5,7 @@
     <link type="text/css" rel="stylesheet" href="../stylesheets/style.css" />
     <script type="text/javascript" src="../javascripts/jquery.js" ></script>
   </head>
-  <body class="main">
+  <body id="main">
     <div class="header">
       <ul class="left">
         <!--<li><a href="#" class="logo">我的账本</a></li>-->
@@ -21,12 +21,28 @@
       </ul>
     </div>
 
-    <div class="body">
-      <div class="form"></div>
-      <div class="zhangmu_list"></div>
-
+    <div id="left_navigation">
+      <ul>
+        <li><a href="#" class="current">我的钱包</a></li>
+        <li><a href="#">借入借出</a></li>
+        <li><a href="#">看病</a></li>
+      </ul>
     </div>
 
+    <div id="right_body">
+      <div class="form">
+        <form name="" method="post">
+          <table>
+            <tr>
+              <td>标题</td><td><input type="text" name="title"/></td>
+              <td>人员</td><td><select name="user_id"/><option>张偲彦</option><option>外星人</option></select></td>
+              <td>日期</td><td><input type="text" name="riqi"/></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="zhangmu_list"></div>
+    </div>
 
   </body>
 </html>

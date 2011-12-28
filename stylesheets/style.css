@@ -1,3 +1,18 @@
+ul {
+  margin: 0px;
+  padding: 0px; 
+}
+
+ul li{
+  list-style-type: none;
+}
+
+.form .label{
+  background-color: #E5E5E5;
+  width: 100px;
+  text-align: right;
+}
+
 body#main{
   background-color: #FFFFFF;
   width: 100%;
@@ -13,6 +28,7 @@ body#main .reset_password{
   width: 250px;
   height: 100%;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 #main #left_navigation a{
@@ -21,9 +37,13 @@ body#main .reset_password{
   margin-left: 30px;
 }
 
+#main #left_navigation a:hover{
+  color: #DD4B4A;
+}
+
 #main #left_navigation ul li{
-  margin-bottom: 20px;
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
 #main #left_navigation .current{
@@ -31,15 +51,111 @@ body#main .reset_password{
 }
 
 #main #right_body{
+  margin-top: 20px;
   float: left;
+  width: 75%;
 }
 
-ul {
-  padding: 0px; 
+#right_body .form{
+  border-bottom: 1px solid #DEDEDE;
+  width: 100%;
 }
 
-ul li{
-  list-style-type: none;
+#right_body #zhangmu_list table{
+  width: 100%;
+}
+
+#right_body #zhangmu_list table td,th {
+  border-color: #DEDEE6;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+}
+
+#right_body #zhangmu_list tr:hover{
+  background-color: #DEEBF7;
+}
+
+#right_body #zhangmu_list th{
+  background-color: #ECF3F9;
+  color: #474754;
+}
+
+#right_body #zhangmu_list tr a{
+  color: #474754;
+}
+
+#right_body #zhangmu_list tr a:hover{
+  color: #DD4B4A;
+}
+
+#right_body #zhangmu_list tr.paginate{
+  text-align: center;
+}
+
+#right_body #zhangmu_list .option_line{
+  background-color: #D1E7FC;
+}
+
+#right_body #zhangmu_list .option_line a{
+  float:right;
+  margin: 10px 20px 10px 0;
+}
+
+#right_body #zhangmu_list th.date{
+  width: 10%; 
+}
+
+#right_body #zhangmu_list th.desc{
+  width: 30%; 
+}
+
+#right_body #zhangmu_list th.account{
+  width: 15%; 
+}
+
+#right_body #zhangmu_list th.cta{
+  width: 25%; 
+}
+
+#right_body #zhangmu_list th.money{
+  width: 20%; 
+}
+
+#right_body #zhangmu_list td{
+  color: #474747;
+}
+
+#right_body #zhangmu_list tr:hover{
+  background-color: #DEEBF7;
+}
+
+#right_body #zhangmu_list td.date{
+  text-align: center; 
+  vertical-align: middle;
+}
+
+#right_body #zhangmu_list td.desc{
+  text-align: left;
+  vertical-align: middle;
+}
+
+#right_body #zhangmu_list td.account{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#right_body #zhangmu_list td.cta{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#right_body #zhangmu_list td.money{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.import{
+  color: #DD4B4A;
 }
 
 .header .logo{
@@ -52,16 +168,16 @@ ul li{
   width: 100%;
 }
 
-#bottom_body .login_form{
-
-}
-
 .header{
   background-color: #59595B;
   height: 60px;
   text-decoration: none;
   width: 100%;
   float: left;
+}
+
+.header ul{
+  margin-top: 15px;
 }
 
 .header a{
@@ -90,9 +206,6 @@ ul li{
   position: relative;
   bottom: 18px;
   margin-left: 10%;
-}
-
-.header ul.left{
   float: left;
   margin-right: 20%;
 }
@@ -102,34 +215,34 @@ ul li{
   margin-right: 20px;
 }
 
-.header ul.navigation{
+.header ul#navigation{
   float: left; 
   font-size: 20px;
   margin-right: 20px;
 }
 
-.header ul.navigation li{
+.header ul#navigation li{
   float: left; 
   margin-right: 20px;
 }
 
-.header ul.about_me{
+.header ul#about_me{
   color: #DDD2D2;
   float: right; 
   margin-right: 20px;
   font-size: 15px;
 }
 
-.header ul.about_me li{
+.header ul#about_me li{
   float: left;
   margin-right: 20px;
 }
 
-.header ul.about_me a{
+.header ul#about_me a{
   color: #DDD2D2;
 }
 
-.header ul.about_me a:hover{
+.header ul#about_me a:hover{
   color: #FFFFFF;
 }
 
@@ -184,7 +297,6 @@ ul li{
 #notice{
   font-size: 20px;
   position: relative;
-  top: 10px;
 }
 
 .success_notice{

@@ -4,6 +4,7 @@
     <title>记账-我的账本</title>
     <link type="text/css" rel="stylesheet" href="../stylesheets/style.css" />
     <script type="text/javascript" src="../javascripts/jquery.js" ></script>
+    <script type="text/javascript" src="../javascripts/My97DatePicker/WdatePicker.js"></script>
   </head>
   <body id="main">
     <div class="header">
@@ -11,11 +12,11 @@
         <!--<li><a href="#" class="logo">我的账本</a></li>-->
         <!--<li><a href="#" class="wangzhi">7ian8bao.com</a></li>-->
       </ul>
-      <ul class="navigation">
+      <ul id="navigation">
         <li><a href="#">首页</a></li>
         <li><a href="index.html" class="current">记帐</a></li>
       </ul> 
-      <ul class="about_me">
+      <ul id="about_me">
         <li><a href="#">欢迎张偲彦</a></li><!-- 指向首页 -->
         <li><a href="../login.html">退出</a></li>
       </ul>
@@ -31,17 +32,100 @@
 
     <div id="right_body">
       <div class="form">
+        <span class="error_messages error_notice">
+        <ul>
+          <li>金额为必添项</li>
+          <li>日期为必添项</li>
+        </ul> 
+        </span>
         <form name="" method="post">
           <table>
             <tr>
-              <td>标题</td><td><input type="text" name="title"/></td>
-              <td>人员</td><td><select name="user_id"/><option>张偲彦</option><option>外星人</option></select></td>
-              <td>日期</td><td><input type="text" name="riqi"/></td>
+              <td class="label"><span class="import">*</span>收支情况:</td><td><select name="action"><option>花了</option><option>挣了</option></select></td>
+              <td class="label">标题:</td><td><input type="text" name="title"/></td>
+              <td class="label"><span class="import">*</span>日期:</td><td><input type="text" name="date" onclick="WdatePicker()"/></td>
+            </tr>
+            <tr>
+              <td class="label"><span class="import">*</span>账户:</td><td><select name="account"><option>我的钱包</option><option>借入借出</option><option>看病</option></select></td>
+              <td class="label"><span class="import">*</span>金额:</td><td><input type="text" name="money"/></td>
+            </tr>
+          
+            <tr>
+              <td class="label"><span class="import">*</span>分类:</td><td><select name='category'><option>餐饮</option><option>住房</option></select></td>
+              <td class="label">说明:</td><td><textarea name="desc" rows="2"></textarea></td>
+              <td></td><td><input type="submit" class="submit" value="保存"/></td>
             </tr>
           </table>
         </form>
       </div>
-      <div class="zhangmu_list"></div>
+      <div id="zhangmu_list">
+        <table>
+          <tr class="option_line">
+            <td colspan="5">
+              <a href="#" >查询</a>
+              <a href="#" >导出excel表</a>
+            </td>
+          </tr>
+          <tr>
+            <th class="date"><a href="#">日期</a></th>
+            <th class="desc">说明</th>
+            <th class="account"><a href="#">账户</a></th>
+            <th class="cta"><a href="#">分类</a>|<a href="#">标题</a>|<a href="#">收支情况</a></th>
+            <th class="money"><a href="#">金额</a></th>
+          </tr>
+          <tr>
+            <td class="date">2011-12-28</td>
+            <td class="desc">蔬菜粥  2份  4元，胡萝卜包子   3个 </td>
+            <td class="account">我的钱包</td>
+            <td class="cta">餐饮|早饭|支出</td>
+            <td class="money">￥15.00</td>
+          </tr>
+          <tr>
+            <td class="date">2011-12-27</td>
+            <td class="desc">蔬菜粥  2份  4元，胡萝卜包子   3个 </td>
+            <td class="account">我的钱包</td>
+            <td class="cta">餐饮|早饭|支出</td>
+            <td class="money">￥15.00</td>
+          </tr>
+          <tr>
+            <td class="date">2011-12-26</td>
+            <td class="desc">蔬菜粥  2份  4元，胡萝卜包子   3个 </td>
+            <td class="account">我的钱包</td>
+            <td class="cta">餐饮|早饭|支出</td>
+            <td class="money">￥15.00</td>
+          </tr>
+          <tr>
+            <td class="date">2011-12-25</td>
+            <td class="desc">蔬菜粥  2份  4元<br>胡萝卜包子   3个 </td>
+            <td class="account">我的钱包</td>
+            <td class="cta">餐饮|早饭|支出</td>
+            <td class="money">￥15.00</td>
+          </tr>
+          <tr>
+            <td class="date">2011-12-24</td>
+            <td class="desc">蔬菜粥  2份  4元<br>胡萝卜包子   3个 </td>
+            <td class="account">我的钱包</td>
+            <td class="cta">餐饮|早饭|支出</td>
+            <td class="money">￥15.00</td>
+          </tr>
+          <tr>
+            <td class="date">2011-12-23</td>
+            <td class="desc">蔬菜粥  2份  4元<br>胡萝卜包子   3个<br>银芽炒面 1份 </td>
+            <td class="account">我的钱包</td>
+            <td class="cta">餐饮|早饭|支出</td>
+            <td class="money">￥15.00</td>
+          </tr>
+          <tr class="paginate">
+            <td colspan="5">
+              <a href="#">上一页</a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">下一页</a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
 
   </body>

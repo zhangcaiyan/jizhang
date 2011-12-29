@@ -3,8 +3,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>记账-我的账本</title>
     <link type="text/css" rel="stylesheet" href="../stylesheets/style.css" />
+    <link type="text/css" rel="stylesheet" href="../stylesheets/boxy.css" />
     <script type="text/javascript" src="../javascripts/jquery.js" ></script>
     <script type="text/javascript" src="../javascripts/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.boxy.js"></script>
   </head>
   <body id="main">
     <div class="header">
@@ -63,8 +65,8 @@
         <table>
           <tr class="option_line">
             <td colspan="5">
-              <a href="#" >查询</a>
-              <a href="#" >导出excel表</a>
+              <a href="#select_accounts" class="boxy" title="查询帐目">查询</a>
+              <a href="#" class="import_excel" title="这是超链接的标题">导出excel表</a>
             </td>
           </tr>
           <tr>
@@ -131,3 +133,68 @@
 
   </body>
 </html>
+
+
+
+<div id="select_accounts" style="display:none;">
+  <form method="post">
+    <table>
+      <tr>
+        <td>标题:</td>
+        <td>
+          <input type="text" name="title_contains"/>
+        </td>
+      </tr>
+      <tr>
+        <td>日期:</td>
+        <td>
+          <input type="text" name="start_date_gte"  onclick="WdatePicker()">
+          -
+          <input type="text" name="end_date_lte"  onclick="WdatePicker()">
+        </td>
+      </tr>
+      <tr>
+        <td>金额:</td>
+        <td>
+          <input type="text" name="money_gte">
+          -
+          <input type="text" name="money_lte">
+        </td>
+      </tr>
+      <tr>
+        <td>收支情况:</td>
+        <td>
+          <select name="action_equals"><option>花了</option><option>挣了</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>账户:</td>
+        <td>
+          <select name="account_equals"><option>我的钱包</option><option>借入借出</option><option>看病</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>分类:</td>
+        <td>
+          <select name='category_equals'><option>餐饮</option><option>住房</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <input type="submit" value="搜索" class="submit"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $(".boxy").boxy();    
+  })
+
+  $('.import_excel').click(function() {
+    Boxy.confirm("确定导出帐目吗", function() { });
+    return false;
+  });
+</script>

@@ -1,0 +1,52 @@
+
+<div style="display:none;">
+  <form method="post">
+    <table>
+      <tr>
+        <td>标题:</td>
+        <td>
+          <input type="text" name="title_contains"/>
+        </td>
+      </tr>
+      <tr>
+        <td>日期:</td>
+        <td>
+          <input type="text" name="start_date_gte"  onclick="WdatePicker()">
+          -
+          <input type="text" name="end_date_lte"  onclick="WdatePicker()">
+        </td>
+      </tr>
+      <tr>
+        <td>金额:</td>
+        <td>
+          <input type="text" name="money_gte">
+          -
+          <input type="text" name="money_lte">
+        </td>
+      </tr>
+      <tr>
+        <td>收支情况:</td>
+        <td>
+          <select name="action_equals"><option>花了</option><option>挣了</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>账户:</td>
+        <td>
+          <select name="account_equals"><option>我的钱包</option><option>借入借出</option><option>看病</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td>分类:</td>
+        <td>
+          <select name='category_equals'><option>餐饮</option><option>住房</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <input type="submit" value="搜索" class="submit"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

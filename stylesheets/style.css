@@ -7,10 +7,29 @@ ul li{
   list-style-type: none;
 }
 
-.form .label{
+#right_body #form{
+  border-bottom: 1px solid #DEDEDE;
+  overflow:hidden;
+}
+
+#form .label{
   background-color: #E5E5E5;
   width: 100px;
   text-align: right;
+}
+
+#form .form{
+  float: left;
+  width: 80%;
+}
+
+#form .error_messages{
+  float: left;
+  width: 20%;
+} 
+
+#form .info ul li{
+  float: right;
 }
 
 body#main{
@@ -38,7 +57,7 @@ body#main .reset_password{
 }
 
 #main #left_navigation a:hover{
-  color: #DD4B4A;
+  color: #51A5EC;
 }
 
 #main #left_navigation ul li{
@@ -47,18 +66,13 @@ body#main .reset_password{
 }
 
 #main #left_navigation .current{
-  color: #DD4B4A;
+  color: #51A5EC;
 }
 
 #main #right_body{
   margin-top: 20px;
   float: left;
   width: 75%;
-}
-
-#right_body .form{
-  border-bottom: 1px solid #DEDEDE;
-  width: 100%;
 }
 
 #right_body #zhangmu_list table{
@@ -85,20 +99,50 @@ body#main .reset_password{
 }
 
 #right_body #zhangmu_list tr a:hover{
-  color: #DD4B4A;
+  color: #51A5EC;
 }
 
-#right_body #zhangmu_list tr.paginate{
+.table_header{
+  background-color: #BFE0FF;
+}
+
+.table_header .left{
+  height: 20px;
+  float: left;
+  width: 30%;
+}
+
+.table_header .left ul{
+  float: left;
+  margin-right: 10px;
+}
+
+.table_header .center{
+  height: 20px;
+  float: left;
+  width: 40%;
   text-align: center;
 }
 
-#right_body #zhangmu_list .option_line{
-  background-color: #D1E7FC;
+.table_header .right{
+  height: 20px;
+  float: left;
+  width: 30%;
 }
 
-#right_body #zhangmu_list .option_line a{
-  float:right;
-  margin: 10px 20px 10px 0;
+.table_header .right ul li{
+  float: right;
+  margin-left: 10px;
+}
+
+.table_info_line{
+  background-color: #D1E7FC;
+  height: 50px;
+}
+
+.table_info_line ul li{
+  float: left;
+  margin-right: 20px;
 }
 
 #right_body #zhangmu_list th.date{
@@ -292,6 +336,20 @@ body#main .reset_password{
 
 .rp_font{
   font-size:15px;
+}
+
+#info{
+  background-color: #DEEBF7;
+  margin-bottom: 40px;
+}
+
+#info ul li{
+  float: left;
+  margin-right: 20px;
+}
+
+#info ul li .title{
+  font-size: 18px;
 }
 
 #notice{

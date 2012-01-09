@@ -153,11 +153,15 @@ body#main .reset_password{
 }
 
 #right_body #zhangmu_list th.cta{
-  width: 25%; 
+  width: 20%; 
 }
 
 #right_body #zhangmu_list th.money{
-  width: 20%; 
+  width: 15%; 
+}
+
+#right_body #zhangmu_list th.option{
+  width: 10%;
 }
 
 #right_body #zhangmu_list td{
@@ -189,6 +193,11 @@ body#main .reset_password{
 }
 
 #right_body #zhangmu_list td.money{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#right_body #zhangmu_list td.option{
   text-align: center;
   vertical-align: middle;
 }

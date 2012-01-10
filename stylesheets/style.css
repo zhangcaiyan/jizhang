@@ -97,6 +97,49 @@ body#main .reset_password{
   color: #51A5EC;
 }
 
+#right_body #zhangmu_list td{
+  color: #474747;
+}
+
+#right_body #zhangmu_list tr:hover{
+  background-color: #DEEBF7;
+}
+
+#right_body #list table{
+  width: 100%;
+}
+
+#right_body #list table td,th {
+  border-color: #DEDEE6;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+}
+
+#right_body #list tr:hover{
+  background-color: #DEEBF7;
+}
+
+#right_body #list th{
+  background-color: #ECF3F9;
+  color: #474754;
+}
+
+#right_body #list tr a{
+  color: #474754;
+}
+
+#right_body #list tr a:hover{
+  color: #51A5EC;
+}
+
+#right_body #list td{
+  color: #474747;
+}
+
+#right_body #list tr:hover{
+  background-color: #DEEBF7;
+}
+
 .table_header{
   background-color: #BFE0FF;
 }
@@ -164,14 +207,6 @@ body#main .reset_password{
   width: 10%;
 }
 
-#right_body #zhangmu_list td{
-  color: #474747;
-}
-
-#right_body #zhangmu_list tr:hover{
-  background-color: #DEEBF7;
-}
-
 #right_body #zhangmu_list td.date{
   text-align: center; 
   vertical-align: middle;
@@ -193,11 +228,56 @@ body#main .reset_password{
 }
 
 #right_body #zhangmu_list td.money{
+  vertical-align: middle;
+  text-align: center;
+}
+
+#right_body #zhangmu_list td.option{
   text-align: center;
   vertical-align: middle;
 }
 
-#right_body #zhangmu_list td.option{
+#right_body #list th.moren{
+  width: 10%;   
+}
+
+#right_body #list th.name{
+  width: 20%;   
+}
+
+#right_body #list th.desc{
+  width: 30%; 
+}
+
+#right_body #list th.date{
+  width: 20%;
+}
+
+#right_body #list th.option{
+  width: 20%;
+}
+
+#right_body #list td.moren{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#right_body #list td.name{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#right_body #list td.desc{
+  text-align: left;
+  vertical-align: middle;
+}
+
+#right_body #list td.date{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#right_body #list td.option{
   text-align: center;
   vertical-align: middle;
 }
@@ -388,6 +468,15 @@ body#main .reset_password{
 
 .error_notice{
   color: #E0734A;
+}
+
+#delete_option{
+  margin-top: 15px;
+}
+
+#delete_option li{
+  float: left;
+  margin-right: 15px;
 }
 
 .submit{

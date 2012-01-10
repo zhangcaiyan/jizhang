@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>记账-我的账本</title>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/style.css" />
+    <script type="text/javascript" src="../javascripts/jquery.js" ></script>
+    <script type="text/javascript" src="../javascripts/highcharts.js"></script>
+  </head>
+  <body id="main">
+    <div class="header">
+      <ul class="left">
+        <!--<li><a href="#" class="logo">我的账本</a></li>-->
+        <!--<li><a href="#" class="wangzhi">7ian8bao.com</a></li>-->
+      </ul>
+      <ul id="navigation">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="jizhang.html">记帐</a></li>
+        <li><a href="set_up.html" class="current">设置</a></li>
+      </ul> 
+      <ul id="about_me">
+        <li><a href="#">欢迎张偲彦</a></li><!-- 指向首页 -->
+        <li><a href="../login.html">退出</a></li>
+      </ul>
+    </div>
+
+    <div id="left_navigation">
+      <ul>
+        <li><a href="zhangben.html">账本管理</a></li>
+        <li><a href="fenlei.html" class="current">分类管理</a></li>
+        <li><a href="renyuan.html">人员管理</a></li>
+        <li><a href="huishouzhan.html">回收站</a></li>
+        <li><a href="reset_password.html">修改密码</a></li>
+      </ul>
+    </div>
+    <div id="right_body">
+
+      <div id="form">
+        <div class="error_messages error_notice">
+        <ul>
+          <li>分类名称不能为空</li>
+          <li>分类名称不能超过10个字符</li>
+        </ul> 
+        </div>
+        <form name="" method="post" class="form">
+          <table>
+            <tr>
+              <td class="label">*名称:</td>
+              <td><input type="text" name="title"/></td>
+              <td class="label">描述:</td>
+              <td><textarea name="desc" rows="2"></textarea></td>
+              <td><input type="submit" class="submit" value="保存"/></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <div id="list">
+        <table>
+          <tr class="table_header">
+            <td colspan="6">
+              <div class="left">
+              </div>
+              <div class="center">
+                <a href="#">上一页</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">下一页</a>
+              </div>
+            </td>
+          </tr>
+          <tr class="table_info_line">
+            <td colspan="6">
+              <ul>
+                <li><span class="title">当前默认分类:</span> 空</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th class="moren">设置默认值</th>
+            <th class="name"><a href="#">名称</a></th>
+            <th class="desc">描述</th>
+            <th class="date"><a href="#">创建日期</a></th>
+            <th class="option">操作</th>
+          </tr>
+          <tr>
+            <td class="moren"><input type="radio" name="name" checked=true/></td>
+            <td class="name">空</td>
+            <td class="desc">描述</td>
+            <td class="date">2011-12-23</td>
+            <td class="option">
+              <a href="#">编辑</a>
+              <a href="#">删除</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="moren"><input type="radio" name="name"/></td>
+            <td class="name">食物</td>
+            <td class="desc">描述</td>
+            <td class="date">2011-12-23</td>
+            <td class="option">
+              <a href="#">编辑</a>
+              <a href="#">删除</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="moren"><input type="radio" name="name"/></td>
+            <td class="name">房租</td>
+            <td class="desc">描述</td>
+            <td class="date">2011-12-23</td>
+            <td class="option">
+              <a href="#">编辑</a>
+              <a href="#">删除</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="moren"><input type="radio" name="name"/></td>
+            <td class="name">其他</td>
+            <td class="desc">描述</td>
+            <td class="date">2011-12-23</td>
+            <td class="option">
+              <a href="#">编辑</a>
+              <a href="#">删除</a>            
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>

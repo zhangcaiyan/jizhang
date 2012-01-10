@@ -84,7 +84,7 @@
 
 
     $("input[name='username']").bind("focus", function(){
-      $(this).parent().next().text("用户名长度不能多余15个字符").attr("class", "success_notice")
+      $(this).parent().next().text("用户名长度不能超过15个字符").attr("class", "success_notice")
     })
 
     $("input[name='username']").bind("blur", function(){
@@ -93,6 +93,8 @@
       notice_area.attr("class", "")
       if(username == ""){
         notice_area.text("用户名不能为空").addClass("error_notice") 
+      }else if(username.length > 15){
+        notice_area.text("用户名长度不能超过15个字符").addClass("error_notice") 
       }else{
         <!--ajax进入后台判断-->
         notice_area.text("用户名可用").addClass("success_notice")
